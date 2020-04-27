@@ -19,7 +19,7 @@ inbox_item_contents = list(map( lambda item: item["content"], inbox_items))
 
 if len(inbox_item_contents) > 0:
     subject = "TODOIST REMINDER - You have %s task in your inbex to organize" % str(len(inbox_item_contents))
-    content = "Hello\n\n\nYou have a few task to review: \n\n-" + ("\n-".join(inbox_item_contents))
+    content = "Hello\n\n\nYou have a few tasks to review: \n\n-" + ("\n-".join(inbox_item_contents))
     message = 'Subject: {}\n\n{}'.format(subject, content)
     server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
     server.ehlo()
